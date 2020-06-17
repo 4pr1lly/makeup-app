@@ -1,0 +1,32 @@
+DOCTYPE html>
+<link rel="stylesheet" href="/css/app.css">
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Welcome <%=player.name%></h1>
+    
+    </body>
+        <form action="/players/profile/<%=players.id%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value=<%=player.name%> /><br> <br>
+            Players name: <input type="text" name="playersname" value=<%=player.playersname%> /> <br> <br>
+            Password: <input type="text" name="password" value=<%=player.password%> /><br> <br>
+            Team: <select name="teamId">
+                <% for(let i=0; i<teams.length; i++){ 
+                    let selected = (teams[i].id == player.Teams.id) ? "selected" : "";    
+                %>
+                    <option value="<%=teams[i].id%>" <%=selected%>><%=teams[i].name%></option>
+                <% } %>
+            <input type="submit" value="Edit Profile" />
+        </form>
+        <br>
+        <form action="/players/<%=players.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Player" />
+        </form>
+
+        <br><br>
+        <a href="/pokemon">View All Pokemon</a> 
+
+    </body>
+</html>
