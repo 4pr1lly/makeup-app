@@ -24,7 +24,7 @@ const signup = (req, res) => {
 module.exports = {
     index,
     renderSignup,
-    renderLogin,
+    //renderLogin,
     signup
 
 }
