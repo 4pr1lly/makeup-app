@@ -3,7 +3,6 @@ const users = require('../models').users;//from users table psql
 
 const index = (req, res) => {
     res.render('users/index.ejs')
-
 }
 
 const renderSignup = (req, res) => {
@@ -17,7 +16,17 @@ const signup = (req, res) => {
     })
 }   
 
+/*
+const deleteUser = (req, res) => {
+    User.destroy({
+        where: {id: req.params.index}
+    })
+    .then(() => {
+        res.redirect('/index');
+    })
 
+}
+*/
 
 
 
@@ -25,6 +34,7 @@ module.exports = {
     index,
     renderSignup,
     //renderLogin,
-    signup
+    signup,
+    deleteUser
 
 }
