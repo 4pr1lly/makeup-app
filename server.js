@@ -9,7 +9,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const app = express();// returns an object
-//const fruits = require('./fruits');
+
 const routes = require('./routes');
 const jwt = require('jsonwebtoken');
 

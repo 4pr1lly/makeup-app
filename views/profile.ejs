@@ -5,10 +5,10 @@ DOCTYPE html>
         <meta charset="utf-8">
     </head>
     <body>
-        <h1>Welcome <%=player.name%></h1>
+        <h1>Welcome page <%=users.name%></h1>
     
     </body>
-        <form action="/players/profile/<%=players.id%>?_method=PUT" method="POST">
+        <form action="<%=users.id%>?_method=PUT" method="POST">
             Name: <input type="text" name="name" value=<%=player.name%> /><br> <br>
             Players name: <input type="text" name="playersname" value=<%=player.playersname%> /> <br> <br>
             Password: <input type="text" name="password" value=<%=player.password%> /><br> <br>
