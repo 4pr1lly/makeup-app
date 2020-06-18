@@ -3,7 +3,6 @@ const users = require('../models').users;//from users table psql
 
 const index = (req, res) => {
     res.render('users/index.ejs')
-
 }
 
 const renderSignup = (req, res) => {
@@ -20,6 +19,7 @@ const renderLogin = (req, res) => {
     res.render('/index/login.ejs')
 }
 
+<<<<<<< HEAD
 const login = (req, res) => {
     users.findOne({
         where: {
@@ -31,15 +31,33 @@ const login = (req, res) => {
         res.redirect(`/index/profile/${foundusers.id}`);
     })
 }
+=======
+/*
+const deleteUser = (req, res) => {
+    User.destroy({
+        where: {id: req.params.index}
+    })
+    .then(() => {
+        res.redirect('/index');
+    })
+>>>>>>> 10bdcd79a272fbd957f0eb29fc254e9938289e44
 
+}
+*/
 
 
 
 module.exports = {
     index,
     renderSignup,
+<<<<<<< HEAD
     renderLogin,
     signup,
     login,
+=======
+    //renderLogin,
+    signup,
+    deleteUser
+>>>>>>> 10bdcd79a272fbd957f0eb29fc254e9938289e44
 
 }
