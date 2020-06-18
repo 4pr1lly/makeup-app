@@ -2,24 +2,23 @@ const users = require('../models').users;//from users table psql
 
 
 const index = (req, res) => {
-    res.render('users/index.ejs')
+    res.render('/index.ejs') ///this works
 }
 
 const renderSignup = (req, res) => {
-    res.render('users/signup.ejs')
+    res.render('signup.ejs')
 }
 
 const signup = (req, res) => {
     users.create(req.body)
     .then(newusers => {
-        res.redirect(`/index/profile/${newusers.id}`);
+        res.redirect(`/profile/${newusers.id}`);
     })
 }   
 const renderLogin = (req, res) => {
-    res.render('/index/login.ejs')
+    res.render('login.ejs') //when rendering a template no forward slash needed .not redirecting to a url
 }
 
-<<<<<<< HEAD
 const login = (req, res) => {
     users.findOne({
         where: {
@@ -28,36 +27,20 @@ const login = (req, res) => {
         }
     })
     .then(foundPlayers => {
-        res.redirect(`/index/profile/${foundusers.id}`);
+        res.redirect(`/profile/${foundusers.id}`);//removed /index 
     })
 }
-=======
-/*
-const deleteUser = (req, res) => {
-    User.destroy({
-        where: {id: req.params.index}
-    })
-    .then(() => {
-        res.redirect('/index');
-    })
->>>>>>> 10bdcd79a272fbd957f0eb29fc254e9938289e44
 
-}
-*/
+
+
 
 
 
 module.exports = {
     index,
     renderSignup,
-<<<<<<< HEAD
     renderLogin,
     signup,
     login,
-=======
-    //renderLogin,
-    signup,
-    deleteUser
->>>>>>> 10bdcd79a272fbd957f0eb29fc254e9938289e44
 
 }
