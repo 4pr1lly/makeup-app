@@ -45,6 +45,16 @@ const renderProfile = (req, res) => {
 }
 
 const editProfile = (req, res) => {
+    User.update(req.body, {
+        where: {iid: req.params.index},
+        returning:true
+    })
+
+
+
+
+
+
     users[req.params.index] = req.body;
     res.redirect(`/users/profile/${req.params.index}`); //look at update method in fruit app
 
@@ -52,20 +62,7 @@ const editProfile = (req, res) => {
 
 
 
-// const renderProfile = (req, res) => {
-//     users.findByPk(req.params.index,{
-//         include: []//need drop down table filler
-//     })
-//     .then(foundusers => {
-//         Team.findAll()
-//         .then(allTeams => {
-//             res.render('players/profile.ejs', {
-//                 player: foundPlayer,
-//                 teams: allTeams
-//             })
-//         })
-//     })
-// }
+
 
 // const editProfile = (req, res) => {
 //     Players.update(req.body, {
