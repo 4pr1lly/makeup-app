@@ -5,18 +5,35 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <h1>Welcome <%=users.name%></h1>
+        <h1>Welcome <%=users.name%> to your makeup bag!</h1> <!--pg 5 on wireframe-->
+
+
+    <div class="Ravs"><!--need some type of loop so show reviews?-->
         <form action="/profile/<%=users.id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%=users.name%>" /><br> <br>
-            Username: <input type="text" name="username" value=<%=users.username%> /> <br> <br>
-            Password: <input type="text" name="password" value=<%=users.password%> /><br> <br>
+            Category: <input type="text" name="Category" value="<%=%>" /><br> <br>
+            Product Type: <input type="text" name="Product" value=<%=%> /> <br> <br>
+            Brand: <input type="text" name="Brand" value=<%=%> /><br> <br>
             <input type="submit" value="Edit Profile" />
         </form>
-        <br>
-        <form action="/profile/<%=users.id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete User" />
-        </form>
+    </div>
 
+        <br>
+
+
+    <div class="Rejects"><!--need some type of loop so show reviews?-->
+        <form action="/profile/<%=users.id%>?_method=PUT" method="POST">
+            Category: <input type="text" name="Category" value="<%=%>" /><br> <br>
+            Product Type: <input type="text" name="Product" value=<%=%> /> <br> <br>
+            Brand: <input type="text" name="Brand" value=<%=%> /><br> <br>
+            <input type="submit" value="Edit Profile" />
+        </form>
+     </div>
+
+        <div class="edit container">
+            <form action="/profile/<%=users.id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete User" />
+            </form>
+        </div>
         <br><br>
         <!-- <a href="/users">View your makeup bag</a>  -->
 
