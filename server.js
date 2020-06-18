@@ -32,25 +32,6 @@ app.get('/index', (req, res) => {
 
 
 
-// app.delete('/pokemon/:index', (req, res) => {
-//     pokemon.splice(req.params.index, 1);
-//     res.redirect('/pokemon');
-// })
-
-// app.get('/pokemon/:index/edit', (req, res) => {
-//     res.render('edit.ejs', {
-//         character: pokemon[req.params.index],
-//         characterIndex: req.params.index
-//     })
-// })
-
-// app.put('/pokemon/:index', (req, res) => {
-//     pokemon[req.params.index] = req.body;
-//     res.redirect('/pokemon');
-// })
-
-
-
 app.listen(3000, ()=>{
     console.log("I am listening");
 });

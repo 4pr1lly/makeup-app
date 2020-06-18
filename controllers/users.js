@@ -13,10 +13,24 @@ const renderSignup = (req, res) => {
 const signup = (req, res) => {
     users.create(req.body)
     .then(newusers => {
-        res.redirect(`/users/profile/${newusers.id}`);
+        res.redirect(`/index/profile/${newusers.id}`);
     })
 }   
+const renderLogin = (req, res) => {
+    res.render('/index/login.ejs')
+}
 
+const login = (req, res) => {
+    users.findOne({
+        where: {
+            username: req.body.username,
+            password: req.body.password,
+        }
+    })
+    .then(foundPlayers => {
+        res.redirect(`/index/profile/${foundusers.id}`);
+    })
+}
 
 
 
@@ -24,7 +38,8 @@ const signup = (req, res) => {
 module.exports = {
     index,
     renderSignup,
-    //renderLogin,
-    signup
+    renderLogin,
+    signup,
+    login,
 
 }
