@@ -1,3 +1,62 @@
-body {
+.welcomebackground {
     background-image: url('../../img/flowerfacebackground.png');
+}
+
+/*
+@font-face {
+    font-family: 'Allura-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Allura-Regular'), url('../../fonts/Allura-Regular.tff'), format('ttf');
+}
+
+*/
+@font-face {
+    font-family: 'Olivia-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/public/fonts/Olivia-Regular.otf'), format('otf');
+}
+
+
+
+
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+}
+
+/*
+.welcometitle {
+    position: relative;
+    font-weight: 300;
+    font-size: 4.5em;
+    color: #402d2d;
+}
+*/
+
+.welcome .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+    line-height: 1em;
+}
+
+.welcomenav {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}    
+
+a:link {
+    color: white;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
 }

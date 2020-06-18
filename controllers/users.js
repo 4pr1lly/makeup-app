@@ -1,4 +1,4 @@
-const users = require('../models').users;//from users table psql
+const User = require('../models').users;//from users table psql
 
 
 const index = (req, res) => {
@@ -10,9 +10,9 @@ const renderSignup = (req, res) => {
 }
 
 const signup = (req, res) => {
-    users.create(req.body)
+    User.create(req.body)
     .then(newusers => {
-        res.redirect(`/profile/${newusers.id}`);
+        res.redirect(`/users/profile/${newusers.id}`);
     })
 }   
 const renderLogin = (req, res) => {
@@ -20,17 +20,64 @@ const renderLogin = (req, res) => {
 }
 
 const login = (req, res) => {
-    users.findOne({
+    User.findOne({
         where: {
             username: req.body.username,
             password: req.body.password,
         }
     })
-    .then(foundPlayers => {
-        res.redirect(`/profile/${foundusers.id}`);//removed /index 
+    .then(foundusers => {
+        res.redirect(`/users/profile/${foundusers.id}`);//removed /index 
     })
 }
 
+
+const renderProfile = (req, res) => {
+    User.findByPk(req.params.index)
+    .then(foundUser => {
+        res.render('profile.ejs', {
+            users: foundUser, 
+            
+        })  
+     })
+
+   
+}
+
+const editProfile = (req, res) => {
+    users[req.params.index] = req.body;
+    res.redirect(`/users/profile/${req.params.index}`); //look at update method in fruit app
+
+}
+
+
+
+// const renderProfile = (req, res) => {
+//     users.findByPk(req.params.index,{
+//         include: []//need drop down table filler
+//     })
+//     .then(foundusers => {
+//         Team.findAll()
+//         .then(allTeams => {
+//             res.render('players/profile.ejs', {
+//                 player: foundPlayer,
+//                 teams: allTeams
+//             })
+//         })
+//     })
+// }
+
+// const editProfile = (req, res) => {
+//     Players.update(req.body, {
+//         where: {
+//             id: req.params.index
+//         },
+//         returning:  true
+//     })
+//     .then(updatedPlayers => {
+//         res.redirect(`/players/profile/${req.params.index}`);
+//     })
+// }
 
 
 
@@ -42,5 +89,7 @@ module.exports = {
     renderLogin,
     signup,
     login,
+    renderProfile,
+    editProfile
 
 }

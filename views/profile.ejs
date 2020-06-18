@@ -10,9 +10,9 @@
 
     <div class="Ravs"><!--need some type of loop so show reviews?-->
         <form action="/profile/<%=users.id%>?_method=PUT" method="POST">
-            Category: <input type="text" name="Category" value="<%=%>" /><br> <br>
-            Product Type: <input type="text" name="Product" value=<%=%> /> <br> <br>
-            Brand: <input type="text" name="Brand" value=<%=%> /><br> <br>
+            Name: <input type="text" name="name" value=<%=users.name%> /><br> <br>
+            User name: <input type="text" name="username" value=<%=users.username%> /> <br> <br><!--look at model for info-->
+            Password: <input type="text" name="password" value=<%=users.password%> /><br> <br>
             <input type="submit" value="Edit Profile" />
         </form>
     </div>
@@ -20,14 +20,6 @@
         <br>
 
 
-    <div class="Rejects"><!--need some type of loop so show reviews?-->
-        <form action="/profile/<%=users.id%>?_method=PUT" method="POST">
-            Category: <input type="text" name="Category" value="<%=%>" /><br> <br>
-            Product Type: <input type="text" name="Product" value=<%=%> /> <br> <br>
-            Brand: <input type="text" name="Brand" value=<%=%> /><br> <br>
-            <input type="submit" value="Edit Profile" />
-        </form>
-     </div>
 
         <div class="edit container">
             <form action="/profile/<%=users.id%>?_method=DELETE" method="POST">
