@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
     rating: DataTypes.INTEGER
   }, {});
   Review.associate = function(models) {
-    // associations can be defined here
-  };
-  return Review;
+    Review.belongsto(models.User, {foreignKey: 'userId'})
+    // Review.belongsToMany(models.Review, {
+    //  through: 'Review_id',
+   
+         };
+      
 };
