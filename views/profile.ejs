@@ -34,14 +34,14 @@
 
 
     <div class="profiledetails">
-        <form action="/profile/<%=users.id%>?_method=PUT" method="POST">
+        <form action="/users/profile/<%=users.id%>?_method=PUT" method="POST">
             Name: <input type="text" name="name" value=<%=users.name%> /><br> <br>
-            Username: <input type="text" name="username" value=<%=users.username%> /> <br> <br><!--look at model for info-->
+            Username: <input type="text" name="username" value=<%=users.username%> /> <br> <br>
             Password: <input type="text" name="password" value=<%=users.password%> /><br> <br>
             <input id="profilebuttonsubmit" type="submit" value="Edit Profile" />
         </form>
         
-        <form action="/profile/<%=users.id%>?_method=DELETE" method="POST">
+        <form action="/users/profile/<%=users.id%>?_method=DELETE" method="POST">
                 <input id="profilebuttondelete" type="submit" value="Delete User" />
         </form>
 

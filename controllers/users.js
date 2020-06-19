@@ -46,33 +46,21 @@ const renderProfile = (req, res) => {
             
         })  
      })
-
-   
 }
 
 const editProfile = (req, res) => {
+    console.log(req.params.index)
     User.update(req.body, {
         where: {id: req.params.index},
-        returning:true
+        returning: true
     })
-
-    users[req.params.index] = req.body;
-    res.redirect(`/users/profile/${req.params.index}`); //look at update method in fruit app
+    .then(updateUser => {
+        console.log(updateUser);
+        res.redirect(`/users/profile/${req.params.index}`);
+    })
 
 }
 
-
-// const editProfile = (req, res) => {
-//     Players.update(req.body, {
-//         where: {
-//             id: req.params.index
-//         },
-//         returning:  true
-//     })
-//     .then(updatedPlayers => {
-//         res.redirect(`/players/profile/${req.params.index}`);
-//     })
-// }
 
 module.exports = {
     index,

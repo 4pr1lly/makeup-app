@@ -10,10 +10,11 @@ module.exports = (sequelize, DataTypes) => {
     rating: DataTypes.INTEGER
   }, {});
   Review.associate = function(models) {
-    Review.belongsto(models.users, {foreignKey: 'userId'})
+    Review.belongsTo(models.users, {foreignKey: 'userId'})
     // Review.belongsToMany(models.Review, {
     //  through: 'Review_id',
    
          };
+         return Review;
       
 };
