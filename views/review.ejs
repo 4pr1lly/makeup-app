@@ -2,30 +2,33 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Welcome <%=player.name%></h1>
-        <form action="/player/profile/<%=player.id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%=player.name%>" /><br> <br>
-            Username: <input type="text" name="username" value=<%=player.username%> /> <br> <br>
-            Password: <input type="text" name="password" value=<%=player.password%> /><br> <br>
-            category: <select name="categoryId">
-                <% for(let i=0; i<category.length; i++){ 
+        <h2>Product Review!</h2>
+
+        
+        <form action="_method=PUT" method="POST">
+            Category: <select name="categoryId"></select>
+            Product Type: <select name="product_type_Id"></select>
+            Brand Name: <select name="brand_Id"></select>
+            Product Name: <input type="text" name="productname"></select>    
+            Price: <input type="integer" name="price" />
+            Quality: <input type="integer" name="rating" />
+            
+            <% for(let i=0; i<category.length; i++){ 
                     let selected = (i+1 == users.category.id) ? "selected" : "";    
                 %>
                     <option value="<%=teams[i].id%>" <%=selected%>><%=category[i].name%></option>
                 <% } %>
-            </select>
-            <br><br>
-            <input type="submit" value="Edit Profile" />
+            <input id="signupsubmitbutton" type="submit" value="SignUp"/>            
         </form>
         <br>
-        <form action="/player/<%=player.id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete User" />
-        </form>
+
 
         <br><br>
-        <a href="/pokemon">View All Pokemon</a> 
+        <a href="/profile">Return to Profile</a> 
 
     </body>
 </html>

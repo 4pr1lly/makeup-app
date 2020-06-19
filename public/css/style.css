@@ -262,8 +262,98 @@ h1 {
 
  .profilebackground {
    background-image: url('../img/profilebackground.jpg');
+   background-attachment: fixed;
  } 
-
  #profiletitle {
-  font-size: 75px;
+  font-size: 65px;
  }
+
+ .Ravs {
+   border: 5px solid black;
+   width: 55%;
+   margin: 20px;
+   padding: 20px;
+   text-align: center;
+   font-family: 'Dancing Script', cursive;
+   font-size: 40px;
+ }
+
+ .Rejects {
+  border: 5px solid black;
+  width: 55%;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+ }
+
+
+ .profiledetails {
+  color: #EC7A8A;
+  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+  margin-left: 5%;
+  margin-top: 70px;
+  line-height: 1.0;
+ }
+ 
+
+ #profilebuttonsubmit {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #EC7A8A;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
+  margin-left: 90px;
+}
+
+
+#profilebuttonsubmit:active {
+  background-color: rgb(192, 97, 110);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#profilebuttonsubmit:hover {
+  background-color: #FEBBC4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+#profilebuttondelete {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #EC7A8A;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
+  margin-left: 90px;
+  margin-top: 10px;
+}
+
+
+#profilebuttondelete:active {
+  background-color: rgb(192, 97, 110);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#profilebuttondelete:hover {
+  background-color: #FEBBC4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

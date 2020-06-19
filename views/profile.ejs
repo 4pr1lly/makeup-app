@@ -11,27 +11,37 @@
         <h2 id="profiletitle">Welcome <%=users.name%>, to your Makeup Bag!</h2> <!--pg 5 on wireframe-->
 
         <div class="reviewlink">
-            <img src="/public/img/addtobaglink.png" alt="addtobaglink">
+            <img src= '../img/addtobaglink.png' alt="addtobaglink">
         </div>
 
     <div class="Ravs"><!--need some type of loop so show reviews?-->
-        <form action="/profile/<%=users.id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value=<%=users.name%> /><br> <br>
-            User name: <input type="text" name="username" value=<%=users.username%> /> <br> <br><!--look at model for info-->
-            Password: <input type="text" name="password" value=<%=users.password%> /><br> <br>
-            <input type="submit" value="Edit Profile" />
-        </form>
+        Products you rated 4 or higher
+        <br><br><!--TABLE HERE-->
+        *Brand*Product Name*Product Type*User Rating* Price*
+        Colorpop SuperShock Eyeshadow, Rating: 5, Price: $8
+
+    </div>
+    <div class="Rejects"><!--need some type of loop so show reviews?-->
+        Products you rated 3 or less
+        <br><br><!--TABLE HERE-->
+        *Brand*Product Name*Product Type*User Rating* Price*
+        HudaBeauty Pastels Eyeshadow, Rating: 3, Price:$18
+
     </div>
 
-        <br>
 
-
-
-        <div class="edit container">
-            <form action="/profile/<%=users.id%>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete User" />
-            </form>
-        </div>
+    <div class="profiledetails">
+        <form action="/profile/<%=users.id%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value=<%=users.name%> /><br> <br>
+            Username: <input type="text" name="username" value=<%=users.username%> /> <br> <br><!--look at model for info-->
+            Password: <input type="text" name="password" value=<%=users.password%> /><br> <br>
+            <input id="profilebuttonsubmit" type="submit" value="Edit Profile" />
+        </form>
+        
+        <form action="/profile/<%=users.id%>?_method=DELETE" method="POST">
+                <input id="profilebuttondelete" type="submit" value="Delete User" />
+        </form>
+    </div>
         <br><br>
         <!-- <a href="/users">View your makeup bag</a>  -->
 

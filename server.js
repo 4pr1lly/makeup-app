@@ -23,7 +23,7 @@ app.get('/index', (req, res) => {
 
 app.use('/users', routes.users);//URL /users needs to go in the user router. 
 //add more routes sheets here
-
+app.use('/review', routes.review);
 
 app.listen(3000, ()=>{
     console.log("I am listening");
