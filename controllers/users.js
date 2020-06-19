@@ -1,5 +1,5 @@
-const User = require('../models').users;//from users table psql
-
+//const User = require('../models').users;//from users table psql
+const User  = require('../models').users;
 
 const index = (req, res) => {
     res.render('/index.ejs') ///this works
