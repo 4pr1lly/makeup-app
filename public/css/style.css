@@ -1,36 +1,12 @@
+body {
+  background-color: #C4DBE1;
+}
 .welcomebackground {
     background-image: url('../../img/shutterstock_1055036450.jpg');
-    background-size: 130% 175%;
+    background-size: 125%;
     background-repeat: no-repeat;
 }
-
 /*
-@font-face {
-    font-family: 'Allura-Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Allura-Regular'), url('../../fonts/Allura-Regular.tff'), format('ttf');
-}
-
-
-@font-face {
-    font-family: 'Olivia-Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/public/fonts/Olivia-Regular.otf'), format('otf');
-}
-*/
-
-
-/*
-.welcometitle {
-    position: relative;
-    font-weight: 300;
-    font-size: 4.5em;
-    color: #402d2d;
-}
-*/
-
 .welcome .text-wrapper {
     position: relative;
     display: inline-block;
@@ -39,29 +15,42 @@
     padding-bottom: 0.15em;
     line-height: 1em;
 }
+*/
+.welcomemessage {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  line-height: 1em;
+  margin-left: 60%;
+
+}
 
 .welcomenav {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-content: center;
-    align-items: center;
-    font-size: 50px;
-    color: white;
+    align-items: flex-end;
+    font-size: 75px;
+    margin-right: 200px;
+    font-family: 'Dancing Script', cursive;
 }    
 
 a {
-    color: white;
+  color: #072940;  
+  text-decoration: none;
+
 }
 
 a:hover {
-    color: black;
-    text-decoration: underline;
+    color: #ffa500;
+    text-decoration: none;
 }
 
 h1 {
     margin-top: 0px;
-    margin-left: 700px;
+    margin-right: 100px;
     font-size: 150px;
     line-height: 200px;
   /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
@@ -74,7 +63,7 @@ h1 {
     animation: blink 12s infinite;
     -webkit-animation: blink 12s infinite;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
   }
   @-webkit-keyframes blink {
     20%,
