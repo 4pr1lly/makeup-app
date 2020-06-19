@@ -10,14 +10,27 @@
        
         <form action="/review" >  <!--method="POST" goal is to push submission to review database attached to userId-->
             Category: <select name="categoryId">
-               
-                -->
+                <% for (let i=0; i<category.length; i++){
+                   
+                    %>
+                        <option value ="<%=category[i].id%>" > <%=category[i].name%></option>
+                    <% } %>
+        
             </select>
             Product Type: <select name="product_type_Id">
                 
             </select>
             Brand Name: <select name="brand_Id">
-               
+              
+                
+                <% for (let i=0; i<brands.length; i++){
+                   
+                %>
+                    <option value ="<%=brands[i].id%>" > <%=brands[i].name%></option>
+                <% } %>
+
+
+
             </select>
             Product Name: <input type="text" name="productname" />   
             Price: <input type="integer" name="price" />
