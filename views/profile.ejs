@@ -3,10 +3,16 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <title>Profile Page</title>
     </head>
-    <body>
-        <h1>Welcome <%=users.name%> to your makeup bag!</h1> <!--pg 5 on wireframe-->
+    <body class="profilebackground">
+        <h2 id="profiletitle">Welcome <%=users.name%>, to your Makeup Bag!</h2> <!--pg 5 on wireframe-->
 
+        <div class="reviewlink">
+            <img src="/public/img/addtobaglink.png" alt="addtobaglink">
+        </div>
 
     <div class="Ravs"><!--need some type of loop so show reviews?-->
         <form action="/profile/<%=users.id%>?_method=PUT" method="POST">

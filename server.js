@@ -21,7 +21,8 @@ app.get('/index', (req, res) => {
 
 })
 
-app.use('/users', routes.users);//URL /users needs to go in the user router
+app.use('/users', routes.users);//URL /users needs to go in the user router. 
+//add more routes sheets here
 
 
 app.listen(3000, ()=>{
