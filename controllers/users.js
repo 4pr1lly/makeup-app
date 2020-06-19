@@ -50,18 +50,10 @@ const editProfile = (req, res) => {
         returning:true
     })
 
-
-
-
-
-
     users[req.params.index] = req.body;
     res.redirect(`/users/profile/${req.params.index}`); //look at update method in fruit app
 
 }
-
-
-
 
 
 // const editProfile = (req, res) => {
@@ -76,10 +68,6 @@ const editProfile = (req, res) => {
 //     })
 // }
 
-
-
-
-
 module.exports = {
     index,
     renderSignup,
@@ -87,6 +75,6 @@ module.exports = {
     signup,
     login,
     renderProfile,
-    editProfile
+    editProfile,
 
 }

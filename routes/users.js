@@ -9,7 +9,6 @@ router.get('/login', ctrl.users.renderLogin);
 router.post('/login', ctrl.users.login);
 router.get('/profile/:index', ctrl.users.renderProfile);
 router.put('/profile/:index', ctrl.users.editProfile);
- //router.delete('/:index', ctrl.users.deletePlayer);
-
+//router.delete('/:index', ctrl.users.deletePlayer);
 
 module.exports = router;
