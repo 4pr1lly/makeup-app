@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const ctrl = require('../controllers');
 
-router.get('/review', ctrl.review.review);
+router.get('/', ctrl.review.review);
 
 
 module.exports = router;

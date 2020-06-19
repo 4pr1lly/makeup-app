@@ -1,7 +1,13 @@
-const Review = require('../models').review;
+const Brand = require('../models').brand;
 
 const review = (req, res) => { 
-    res.render('/review.ejs')
+    Brand.findAll() //after all 'find' functions .then will follow
+    .then(allBrands => {
+        res.render('review.ejs',{
+            brands:allBrands //select to put into a dropdown
+        }) 
+    })
+    
 }
 
 module.exports = {
