@@ -1,8 +1,11 @@
+
 'use strict';
-/*
+
 module.exports = (sequelize, DataTypes) => {
     const Review = sequelize.define('Review', {
-        name: DataTypes.STRING
+       productName: DataTypes.STRING,
+       price: DataTypes.INTEGER,
+       rating: DataTypes.INTEGER
       }, {});
       Review.associate = function(models) {
         Review.belongsToMany(models.Review, {
@@ -16,8 +19,8 @@ module.exports = (sequelize, DataTypes) => {
       };
       return Review;
 };
-*/
 
+/*
 module.exports = (sequelize, DataTypes) => {
     const category = sequelize.define('category', {
       name: DataTypes.STRING
@@ -31,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     };
     return category;
   };
-  /*
+  
   module.exports = (sequelize, DataTypes) => {
     const productType = sequelize.define('Product_Type', {
         name: DataTypes.STRING
