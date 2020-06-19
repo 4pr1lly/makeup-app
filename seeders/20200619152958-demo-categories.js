@@ -5,28 +5,28 @@ module.exports = {
     return queryInterface.bulkInsert('categories', [
       {
           name:'Face',
-          createdAt: new Date(),
-          updatedAt: new Date()
+          // createdAt: new Date(),
+          // updatedAt: new Date()
       },
       {
           name:'Eyes',
-          createdAt: new Date(),
-          updatedAt: new Date()
+          // createdAt: new Date(),
+          // updatedAt: new Date()
       },
       {
           name:'Lips',
-          createdAt: new Date(),
-          updatedAt: new Date()
+          // createdAt: new Date(),
+          // updatedAt: new Date()
       },
       {
         name:'Body',
-        createdAt: new Date(),
-        updatedAt: new Date()
+        // createdAt: new Date(),
+        // updatedAt: new Date()
       },
       {
         name:'Skincare',
-        createdAt: new Date(),
-        updatedAt: new Date()
+        // createdAt: new Date(),
+        // updatedAt: new Date()
     }
     ], {});
   },
