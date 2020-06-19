@@ -8,7 +8,7 @@
     <body>
         <h2>Product Review!</h2>
        
-        <form action="/review" >  <!--method="POST" goal is to push submission to review database attached to userId-->
+        <form action="/review/<%=user%>" method="POST"  >  
             Category: <select name="categoryId">
                 <% for (let i=0; i<category.length; i++){
                    
@@ -17,10 +17,16 @@
                     <% } %>
         
             </select>
-            Product Type: <select name="product_type_Id">
+            Product Type: <select name="productTypeId">
+
+                <% for (let i=0; i<productType.length; i++){
+                   
+                    %>
+                        <option value ="<%=productType[i].id%>" > <%=productType[i].name%></option>
+                    <% } %>
                 
             </select>
-            Brand Name: <select name="brand_Id">
+            Brand Name: <select name="brandId">
               
                 
                 <% for (let i=0; i<brands.length; i++){
@@ -32,7 +38,7 @@
 
 
             </select>
-            Product Name: <input type="text" name="productname" />   
+            Product Name: <input type="text" name="productName" />   
             Price: <input type="integer" name="price" />
             Quality: <input type="integer" name="rating" />
             
