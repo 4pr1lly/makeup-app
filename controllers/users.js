@@ -46,7 +46,7 @@ const renderProfile = (req, res) => {
 
 const editProfile = (req, res) => {
     User.update(req.body, {
-        where: {iid: req.params.index},
+        where: {id: req.params.index},
         returning:true
     })
 
