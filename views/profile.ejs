@@ -49,5 +49,11 @@
         <br><br>
         <a href="/review/<%=users.id%>">Add a new review</a>  
 
+        <% for (let i=0; i<users.Reviews.length; i++){
+                   
+            %>
+                <%=users.Reviews[i].productName%>
+            <% } %>
+
     </body>
 </html>

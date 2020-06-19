@@ -1,4 +1,5 @@
 const User = require('../models').users;//from users table psql
+const Review = require('../models').Review;
 
 
 const index = (req, res) => {
@@ -33,8 +34,13 @@ const login = (req, res) => {
 
 
 const renderProfile = (req, res) => {
-    User.findByPk(req.params.index)
+    User.findByPk(req.params.index, {
+        include: [{
+            model: Review
+        }] 
+    })
     .then(foundUser => {
+        console.log(foundUser)
         res.render('profile.ejs', {
             users: foundUser, 
             
