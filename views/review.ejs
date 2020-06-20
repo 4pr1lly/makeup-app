@@ -5,51 +5,48 @@
         <link href="/css/style.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <h2>Product Review!</h2>
+    <body class="reviewbackground">
+        <h2>Review A Product!</h2>
        
-        <form action="/review/<%=user%>" method="POST"  >  
-            Category: <select name="categoryId">
-                <% for (let i=0; i<category.length; i++){
-                   
-                    %>
-                        <option value ="<%=category[i].id%>" > <%=category[i].name%></option>
-                    <% } %>
-        
-            </select>
-            Product Type: <select name="productTypeId">
-
-                <% for (let i=0; i<productType.length; i++){
-                   
-                    %>
-                        <option value ="<%=productType[i].id%>" > <%=productType[i].name%></option>
-                    <% } %>
-                
-            </select>
-            Brand Name: <select name="brandId">
-              
-                
-                <% for (let i=0; i<brands.length; i++){
-                   
-                %>
-                    <option value ="<%=brands[i].id%>" > <%=brands[i].name%></option>
-                <% } %>
-
-
-
-            </select>
-            Product Name: <input type="text" name="productName" />   
-            Price: <input type="integer" name="price" />
-            Quality: <input type="integer" name="rating" />
+        <div class="reviewinstructions"> 
+            Complete the below fields to add a review to your Makeup Bag
+        </div>
+        <div class="reviewinputfields"> 
+            <form action="/review/<%=user%>" method="POST"  >  
+                Category: <select name="categoryId">
+                    <% for (let i=0; i<category.length; i++){                    
+                        %>
+                            <option value ="<%=category[i].id%>" > <%=category[i].name%></option>
+                        <% } %>
             
+                        </select>
+                        <br><br>
+                Product Type: <select name="productTypeId">
+                    <% for (let i=0; i<productType.length; i++){                    
+                        %>
+                            <option value ="<%=productType[i].id%>" > <%=productType[i].name%></option>
+                        <% } %>                    
+                        </select>
+                        <br><br>
+                Brand Name: <select name="brandId">                   
+                    <% for (let i=0; i<brands.length; i++){
+                    %>
+                        <option value ="<%=brands[i].id%>" > <%=brands[i].name%></option>
+                    <% } %>
+                        </select>
+                        <br><br>
+                Product Name: <input type="text" name="productName" />  
+                <br><br> 
+                Price: <input type="integer" name="price" />
+                <br><br>
+                Quality: <input type="integer" name="rating" /> <span id="scaletext">(Scale: 1 is lowest, 7 is highest)</span>
+                <br><br>        
             
-            <input id="signupsubmitbutton" type="submit" value="Submit"/>            
-        </form>
+            <input id="reviewsubmitbutton" type="submit" value="Submit"/>            
+            </form>
+        </div>  
         <br>
 
-
-        <br><br>
-        <a href="/profile">Return to Profile</a> 
 
     </body>
 </html>

@@ -8,52 +8,51 @@
         <title>Profile Page</title>
     </head>
     <body class="profilebackground">
-        <h2 id="profiletitle">Welcome <%=users.name%>, to your Makeup Bag!</h2> <!--pg 5 on wireframe-->
+        <h2 id="profiletitle">Welcome <%=users.name%>, to your Makeup Bag!</h2>
 
-        <div class="reviewlink">
-            <a href="/review"
-            Click here
-            <img src= '../img/addtobaglink.png' alt="addtobaglink">
-            </a>
+            <div class="linkwrapper"> 
+                <a href="/review/<%=users.id%>">
+                    <div class="reviewlink"> </div>
+                </a>            
+            </div>
+
+            <div id="reviewsectiontitle">
+                Your Reviews:
+            </div>
+
+        <div class="review">
+                <% for (let i=0; i<users.Reviews.length; i++){                   
+                %>
+                Product: <%=users.Reviews[i].productName%>
+                <br><br>
+                Rating: <%=users.Reviews[i].rating%> 
+                <br><br>
+                Price: <%=users.Reviews[i].price%> 
+                <br><br> 
+                <% } %>
         </div>
 
-    <div class="Ravs"><!--need some type of loop so show reviews? PULL FROM DATABASE->
-        Products you rated 4 or higher
-        <br><br> <!--table here-->
-        *Brand*Product Name*Product Type*User Rating* Price*
-        Colorpop SuperShock Eyeshadow, Rating: 5, Price: $8
+        <div id="profilesectiontitle"> 
+            Your Profile Details
+        </div>
 
-    </div>
-    <div class="Rejects"><!--need some type of loop so show reviews? PULL FROM DATABASE-->
-        Products you rated 3 or less
-        <br><br><!--TABLE HERE-->
-        *Brand*Product Name*Product Type*User Rating* Price*
-        HudaBeauty Pastels Eyeshadow, Rating: 3, Price:$18
+        <div class="profiledetails">
+            <form action="/users/profile/<%=users.id%>?_method=PUT" method="POST">
+                Name: <input type="text" name="name" value=<%=users.name%> /><br> <br>
+                Username: <input type="text" name="username" value=<%=users.username%> /> <br> <br>
+                Password: <input type="text" name="password" value=<%=users.password%> /><br> <br>
+                <input id="profileeditbutton" type="submit" value="Edit Profile" />
+            </form>
+            
+            <form action="/users/profile/<%=users.id%>?_method=DELETE" method="POST">
+                    <input id="profilebuttondelete" type="submit" value="Delete User" />
+            </form>
 
-    </div>
-
-
-    <div class="profiledetails">
-        <form action="/users/profile/<%=users.id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value=<%=users.name%> /><br> <br>
-            Username: <input type="text" name="username" value=<%=users.username%> /> <br> <br>
-            Password: <input type="text" name="password" value=<%=users.password%> /><br> <br>
-            <input id="profilebuttonsubmit" type="submit" value="Edit Profile" />
-        </form>
-        
-        <form action="/users/profile/<%=users.id%>?_method=DELETE" method="POST">
-                <input id="profilebuttondelete" type="submit" value="Delete User" />
-        </form>
-
-    </div>
+        </div>
         <br><br>
-        <a href="/review/<%=users.id%>">Add a new review</a>  
+        
 
-        <% for (let i=0; i<users.Reviews.length; i++){
-                   
-            %>
-                <%=users.Reviews[i].productName%>
-            <% } %>
+        
 
     </body>
 </html>

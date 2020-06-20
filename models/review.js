@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Review.associate = function(models) {
     Review.belongsTo(models.users, {foreignKey: 'userId'})
+
     // Review.belongsToMany(models.Review, {
     //  through: 'Review_id',
    

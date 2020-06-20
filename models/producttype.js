@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {});
   ProductType.associate = function(models) {
-    // associations can be defined here
+    
   };
   return ProductType;
 };

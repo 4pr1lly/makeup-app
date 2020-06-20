@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   users.associate = function(models) {
     users.hasMany(models.Review, {foreignKey: 'userId'} )
+    
   };
   return users;
 }; 

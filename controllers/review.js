@@ -3,9 +3,6 @@ const Category = require('../models').category;
 const ProductType = require('../models').ProductType;
 const Review = require('../models').Review;
 
-
-
-
 const review = (req, res) => { 
     Brand.findAll() //after all 'find' functions .then will follow. it will find all the Brands on the table will take this to the drop down
 
@@ -38,9 +35,11 @@ const createReview =(req,res)=> {
     })
 }
 
+
+
 module.exports = {
     review,
-    createReview
+    createReview,
     // renderReview,
     // reviewSubmission,
     // postReviewRav,
