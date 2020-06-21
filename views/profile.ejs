@@ -8,7 +8,7 @@
         <title>Profile Page</title>
     </head>
     <body class="profilebackground">
-        <h2 id="profiletitle">Welcome <%=users.name%>, to your Makeup Bag!</h2>
+        <h2 id="profiletitle">Welcome to your Makeup Bag!</h2>
 
             <div class="linkwrapper"> 
                 <a href="/review/<%=users.id%>">
@@ -23,11 +23,11 @@
         <div class="review">
                 <% for (let i=0; i<users.Reviews.length; i++){                   
                 %>
-                Product: <%=users.Reviews[i].productName%>
+                <b>Product:</b> <%=users.Reviews[i].productName%>
                 <br><br>
-                Rating: <%=users.Reviews[i].rating%> 
+                <b>Rating:</b> <%=users.Reviews[i].rating%> 
                 <br><br>
-                Price: <%=users.Reviews[i].price%> 
+                <b>Price:</b> <%=users.Reviews[i].price%> 
                 <br><br> 
                 <% } %>
         </div>

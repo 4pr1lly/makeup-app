@@ -58,9 +58,16 @@ const editProfile = (req, res) => {
         console.log(updateUser);
         res.redirect(`/users/profile/${req.params.index}`);
     })
-
 }
 
+const deleteUser = (req, res) => {
+    User.destroy({
+        id: req.params.index
+    })
+    .then(() => {
+        res.redirect ('/');
+    })
+}
 
 module.exports = {
     index,
@@ -70,5 +77,6 @@ module.exports = {
     login,
     renderProfile,
     editProfile,
+    deleteUser
 
 }

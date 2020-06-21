@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head></head>
+    <body>
+        <h1>Edit review page</h1>
+        <form action= "/users/<%=users.id%>?_method=PUT"  method="POST">
+            Category: <input type="text" name="Category" value="<%=categories.name%>"/>
+            Product Type: <input type="text" name="ProductType" value="<%=ProductType.name%>"/>
+            Brand Name: <input type="text" name="brands" value="<%=brands.name%>"/>
+            Product name: <input type="text" name="color" value="<%=review.productName%>"/>
+            add to bag: 
+            <input type="checkbox" name="readyToAdd" 
+                <% if (users.readyToAdd === true) { %>
+                    checked
+                <% } %>
+                />
+                
+        
+            <input type ="submit" value ="Edit bag"/>
+    </form>
+    </body>
+</html>
