@@ -2,7 +2,7 @@ const User = require('../models').users;//from users table psql
 const Review = require('../models').Review;
 
 const index = (req, res) => {
-    res.render('/index.ejs') ///this works
+    res.render('index.ejs') ///this works
 }
 
 const renderSignup = (req, res) => {
@@ -62,12 +62,15 @@ const editProfile = (req, res) => {
 
 const deleteUser = (req, res) => {
     User.destroy({
-        id: req.params.index
+        where: {
+            id: req.params.index
+        }
     })
     .then(() => {
-        res.redirect ('/');
+        res.redirect('/index');
     })
 }
+
 
 module.exports = {
     index,
