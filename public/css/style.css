@@ -117,8 +117,17 @@ h1 {
   }
   .signuptitle {
     font-family: 'Dancing Script', cursive;
-    font-size: 90px;
-    color: white;
+    margin-bottom: 0px;
+   
+  }
+
+  .instructionswrapper {
+    width: 50%;
+    margin-left: 20%;
+  }
+
+  .signupinstructions {
+    content:url('../img/signupinstructions.png');
   }
 
   .signupfields {
@@ -126,7 +135,8 @@ h1 {
     font-size: 50px;
     font-family: 'Dancing Script', cursive;
     margin-left: 5%;
-    margin-top: 5%;
+    line-height: 0.5;
+    width: 50%;
   }
   
 
@@ -196,6 +206,7 @@ h1 {
   h2 {
     margin-top: 0px;
     margin-right: 100px;
+    margin-bottom: 0px;
     font-size: 150px;
     line-height: 200px;
   /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
@@ -312,7 +323,7 @@ div.reviewlink {
 #profilesectiontitle {
   font-family: 'Dancing Script', cursive;
   color: rgb(196, 93, 107);
-  font-size: 75px;
+  font-size: 50px;
   width: 50%;
   text-align: center;
   text-decoration: underline;
