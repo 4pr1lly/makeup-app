@@ -27,10 +27,17 @@ const login = (req, res) => {
         }
     })
     .then(foundusers => {
+        if(foundUser){
+            bcrypt.compare(req.body.password, foundUser.password, (err, match) => {
+                if (match) {
         res.redirect(`/users/profile/${foundusers.id}`);//removed /index 
+    } else {
+        return res.sendStatus(400);
+        }
+       })
+     }
     })
 }
-
 
 const renderProfile = (req, res) => {
     User.findByPk(req.params.index, {
