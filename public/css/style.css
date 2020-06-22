@@ -111,7 +111,8 @@ h1 {
   }
 
   .signuppage {
-    background-image: url('../img/signupbackground.png');
+    background-image: url('../img/signupbackground.jpg');
+    width: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
@@ -127,11 +128,16 @@ h1 {
   }
 
   .signupinstructions {
-    content:url('../img/signupinstructions.png');
+    color: #CC6574;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    width: 50%;
+    text-align: center;
+    margin: 2.5%
   }
 
   .signupfields {
-    color: white;
+    color: #CC6574;
     font-size: 50px;
     font-family: 'Dancing Script', cursive;
     margin-left: 5%;
@@ -304,11 +310,20 @@ h1 {
   text-decoration: underline;
 }
 
-div.reviewlink {
+.reviewlink {
   content:url('../img/addtobaglink.png');
   width: 400px;
-  
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
+
+.linkwrapper:hover .reviewlink {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
 
  .review {
    width: 55%;
@@ -319,6 +334,70 @@ div.reviewlink {
    font-size: 50px;
    line-height: .5em;
  }
+
+.shoppingtitle {
+  font-family: 'Dancing Script', cursive;
+  color: rgb(196, 93, 107);
+  font-size: 50px;
+  margin-top: 5%;
+  text-align: center;
+  width: 50%;
+}
+
+#brushleft {
+content: url('../img/makeupbrush\ left.png');  
+width: 150px
+}
+
+#brushright {
+  width: 150px;
+  content: url('../img/makeupbrush\ right.png');
+}
+
+.shoppingwrapper {
+  width: 55%; 
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+
+.ulta {
+  content:url('../img/ultalogo.png');
+  width: 250px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+
+.ultawrapper:hover .ulta {
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+
+.sephora {
+  content:url('../img/sephora.jpg');
+  width: 250px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.sephorawrapper:hover .sephora {
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
 
 #profilesectiontitle {
   font-family: 'Dancing Script', cursive;
@@ -331,7 +410,7 @@ div.reviewlink {
 }
 
  .profiledetails {
-  color: #EC7A8A;
+  color: rgb(196, 93, 107);
   font-size: 30px;
   font-family: 'Dancing Script', cursive;
   margin-left: 5%;
