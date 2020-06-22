@@ -11,7 +11,7 @@ location to keep track of your thoughts of the products that you have tested!
 Create a profile and get to reviewing! 
 
 <h1> ERD </h1>
-![ERD]('../img/ERD.png)
+![ERD](../img/ERD.png)
 
 <h1> Wireframe </h1>
 ![Wireframe1] (img/wireframe1.png)
