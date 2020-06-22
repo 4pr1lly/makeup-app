@@ -72,6 +72,25 @@ const deleteUser = (req, res) => {
 }
 
 
+const renderLogout = (req, res) => {
+    res.render('logout.ejs') //when rendering a template no forward slash needed .not redirecting to a url
+}
+
+
+const logOutUser = (req, res) => {
+    if(req.session) {
+        req.session.destroy(function(err) {
+            if (err) {
+               
+            } else {
+                 res.redirect('/');
+            }
+        });
+    }
+};
+
+
+
 module.exports = {
     index,
     renderSignup,
@@ -80,6 +99,9 @@ module.exports = {
     login,
     renderProfile,
     editProfile,
-    deleteUser
+    deleteUser,
+    logOutUser,
+    renderLogout
+    
 
 }
