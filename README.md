@@ -14,7 +14,7 @@ Create a profile and get to reviewing!
 ![ERD](img/ERD.png)
 
 <h1> Wireframe </h1>
-![Wireframe1] (img/wireframe1.png)
+![Wireframe1] (../img/wireframe1.png)
 ![Wireframe1] (img/wireframe2.png)
 ![Wireframe1] (img/wireframe3.png)
 ![Wireframe1] (img/wireframe4.png)
