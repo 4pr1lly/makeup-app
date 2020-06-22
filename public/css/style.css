@@ -24,6 +24,7 @@
   flex-wrap: wrap;
   line-height: 1em;
   margin-left: 60%;
+  margin-right: 2%;
 
 }
 
@@ -33,12 +34,17 @@
     align-items: flex-end;
     font-size: 75px;
     margin-right: 200px;
+    margin-top: 2%;
     font-family: 'Dancing Script', cursive;
     color: #072940;  
   text-decoration: none;
 }    
 
+a {
+  color: #072940;  
+  text-decoration: none;
 
+}
 
 a:hover {
     color: #ffa500;
@@ -278,6 +284,8 @@ h1 {
     font-size: 50px;
     font-family: 'Dancing Script', cursive;
     margin-left: 5%;
+    margin-top: 5%;
+    line-height: .5;
   }
 
  .profilebackground {
@@ -293,7 +301,7 @@ h1 {
  .linkwrapper {
   display: flex;
   justify-content: center;
-   width: 55%;
+   width: 50%;
   margin: 20px;
   text-align: center;
   font-family: 'Dancing Script', cursive;
@@ -308,6 +316,7 @@ h1 {
   width: 50%;
   text-align: center;
   text-decoration: underline;
+  margin-bottom: 5%;
 }
 
 .reviewlink {
@@ -326,22 +335,52 @@ h1 {
 
 
  .review {
-   width: 55%;
-   margin: 20px;
-   padding-left: 5%;
+   width: 50%;
+   padding: 15px;
+   margin-left: 5%;
    font-family: 'Dancing Script', cursive;
    color: rgb(196, 93, 107);
-   font-size: 50px;
-   line-height: .5em;
+   font-size: 30px;
+   line-height: 1em;
+   display: inline-block;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   border: 2px solid rgb(196, 93, 107);
+   -webkit-box-shadow: 22px 7px 50px -13px rgba(0,0,0,0.73);
+   -moz-box-shadow: 22px 7px 50px -13px rgba(0,0,0,0.73);
+   box-shadow: 22px 7px 50px -13px rgba(0,0,0,0.73);
+   
+ }
+
+ .answercolor {
+  color: #9A849B;
+ }
+
+ #reviewseperator {
+   content: url('../img/reviewseperator.png');
+   width: auto;
+   padding: 10px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+
  }
 
 .shoppingtitle {
   font-family: 'Dancing Script', cursive;
   color: rgb(196, 93, 107);
   font-size: 50px;
-  margin-top: 5%;
+  margin: 5%;
   text-align: center;
   width: 50%;
+}
+
+#shoppingtitlespan {
+  padding: 2%;
+  border: 2px solid rgb(196, 93, 107);
+  -webkit-box-shadow: 0px 0px 78px -2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 78px -2px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 78px -2px rgba(0,0,0,0.5);
 }
 
 #brushleft {
@@ -358,7 +397,7 @@ width: 150px
   width: 55%; 
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2%;
+  margin: 2%;
 }
 
 .ulta {
@@ -366,7 +405,6 @@ width: 150px
   width: 250px;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-transform: scale(1);
 	transform: scale(1);
@@ -386,7 +424,6 @@ width: 150px
   width: 250px;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-transform: scale(1);
 	transform: scale(1);
@@ -407,6 +444,7 @@ width: 150px
   text-align: center;
   text-decoration: underline;
   margin-top: 5%;
+  margin-left: 5%;
 }
 
  .profiledetails {

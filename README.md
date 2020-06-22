@@ -11,14 +11,14 @@ location to keep track of your thoughts of the products that you have tested!
 Create a profile and get to reviewing! 
 
 <h1> ERD </h1>
-![ERD](../img/ERD.png)
+![ERD](../readmeimg/ERD.png)
 
 <h1> Wireframe </h1>
-![Wireframe1] (../img/wireframe1.png)
-![Wireframe1] (img/wireframe2.png)
-![Wireframe1] (img/wireframe3.png)
-![Wireframe1] (img/wireframe4.png)
-![Wireframe1] (img/wireframe5.png)
+![Wireframe1](../readmeimg/wireframe1.png)
+![Wireframe1](../readmeimg/wireframe2.png)
+![Wireframe1](../readmeimg/wireframe3.png)
+![Wireframe1](../readmeimg/wireframe4.png)
+![Wireframe1](../readmeimg/wireframe5.png)
 
 
 

@@ -23,20 +23,20 @@
         <div class="review">
                 <% for (let i=0; i<users.Reviews.length; i++){                   
                 %>
-                <b>Brand:</b> <%=users.Reviews[i].brand.name%>
-                <b>Product:</b> <%=users.Reviews[i].productName%>
-                <b>Product Type:</b> <%=users.Reviews[i].ProductType.name%>
-                <b>Category:</b> <%=users.Reviews[i].category.name%>
+                <b>Category: </b> <span class="answercolor"><%=users.Reviews[i].category.name%>, </span>
+                <b>Brand: </b> <span class="answercolor"><%=users.Reviews[i].brand.name%>, </span>
+                <b>Product: </b> <span class="answercolor"><%=users.Reviews[i].productName%>,  </span>
+                <b>Product Type:</b> <span class="answercolor"><%=users.Reviews[i].ProductType.name%>, </span>
                 <br><br>
-                <b>Rating:</b> <%=users.Reviews[i].rating%> 
-                <br><br>
-                <b>Price:</b> <%=users.Reviews[i].price%> 
-                <br><br> 
+                <b>Price: </b> <span class="answercolor"><%=users.Reviews[i].price%>, </span> 
+                <b>Rating: </b> <span class="answercolor"><%=users.Reviews[i].rating%> </span>
+                <div id="reviewseperator"></div>
                 <% } %>
+                
         </div>
 
         <div class="shoppingtitle">
-            <span id="brushleft"></span>Ready to go shopping?<span id="brushright"></span>
+            <span id="brushleft"></span> <span id="shoppingtitlespan">Ready to go shopping?</span><span id="brushright"></span>
         </div>    
 
         <div class="shoppingwrapper">   
