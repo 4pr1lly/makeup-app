@@ -1,6 +1,8 @@
 const User = require('../models').users;//from users table psql
 const Review = require('../models').Review;
-
+const Brand = require('../models').brand;
+const Category = require('../models').category;
+const ProductType = require('../models').ProductType;
 const index = (req, res) => {
     res.render('index.ejs') ///this works
 }
@@ -43,7 +45,18 @@ const renderProfile = (req, res) => {
     User.findByPk(req.params.index, {
         include: [
             {
-            model: Review
+            model: Review,
+            include:[
+                {
+                    model: Brand,
+                },
+                    {
+                        model: Category
+                    },
+                    {
+                        model: ProductType
+                    },
+            ]
         }], 
     })
     .then(foundUser => {

@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {});
   Brand.associate = function(models) {
+    Brand.hasMany(models.Review, {foreignKey: 'brandId'} )
 
   
   };

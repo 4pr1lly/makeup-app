@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Review.associate = function(models) {
     Review.belongsTo(models.users, {foreignKey: 'userId'})
+    Review.belongsTo(models.brand, {foreignKey: 'brandId'})
+    Review.belongsTo(models.category, {foreignKey: 'categoryId'})
+    Review.belongsTo(models.ProductType, {foreignKey: 'productTypeId'})
+
+
 
     // Review.belongsToMany(models.Review, {
     //  through: 'Review_id',

@@ -23,7 +23,10 @@
         <div class="review">
                 <% for (let i=0; i<users.Reviews.length; i++){                   
                 %>
+                <b>Brand:</b> <%=users.Reviews[i].brand.name%>
                 <b>Product:</b> <%=users.Reviews[i].productName%>
+                <b>Product Type:</b> <%=users.Reviews[i].ProductType.name%>
+                <b>Category:</b> <%=users.Reviews[i].category.name%>
                 <br><br>
                 <b>Rating:</b> <%=users.Reviews[i].rating%> 
                 <br><br>
