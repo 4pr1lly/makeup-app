@@ -4,7 +4,7 @@ const ProductType = require('../models').ProductType;
 const Review = require('../models').Review;
 
 const review = (req, res) => { 
-    Brand.findAll() //after all 'find' functions .then will follow. it will find all the Brands on the table will take this to the drop down
+    Brand.findAll() //after all 'find' functions "".then" will follow. it will find all the Brands on the table will take this to the drop down
 
     .then(allBrands => {
         Category.findAll()
@@ -40,9 +40,5 @@ const createReview =(req,res)=> {
 module.exports = {
     review,
     createReview,
-    // renderReview,
-    // reviewSubmission,
-    // postReviewRav,
-    // postReviewReject,
-
+    
 }

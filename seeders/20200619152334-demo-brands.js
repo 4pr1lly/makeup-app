@@ -34,9 +34,6 @@ module.exports = {
         name: 'CeraVe'
       },
       {
-        name: 'Clinique'
-      },
-      {
         name: 'ColourPop'
       },
       {
