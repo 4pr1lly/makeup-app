@@ -43,7 +43,7 @@ const login = (req, res) => {
         }
     })
     .then(foundusers => {
-        res.redirect(`/users/profile/${foundusers.id}`);//removed /index 
+        res.redirect(`/users/profile/${foundusers.id}`);
     })
 }
 

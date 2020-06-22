@@ -3,7 +3,7 @@ const router = express.Router();
 const ctrl = require('../controllers');
 
 router.get('/:userId', ctrl.review.review);
-router.post('/:userId', ctrl.review.createReview);//this will link the user with the review
+router.post('/:userId', ctrl.review.createReview);
 
 module.exports = router;
 

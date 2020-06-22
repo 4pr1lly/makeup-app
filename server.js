@@ -1,11 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const app = express();//app is an object
+const app = express();
 const routes = require('./routes');
-// require('dotenv').config();
 
-//imported express library
+
 
 //middleware
 //using body-parser to parse request data
@@ -20,8 +19,8 @@ app.get('/index', (req, res) => {
 
 //add router object to middleware
 app.use('/users', routes.users);//URL /users needs to go in the user router. 
-//add more routes sheets here
 app.use('/review', routes.review);
+
 
 
 app.listen(3000, ()=>{

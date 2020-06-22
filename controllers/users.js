@@ -1,10 +1,10 @@
-const User = require('../models').users;//from users table psql
+const User = require('../models').users;
 const Review = require('../models').Review;
 const Brand = require('../models').brand;
 const Category = require('../models').category;
 const ProductType = require('../models').ProductType;
 const index = (req, res) => {
-    res.render('index.ejs') ///this works
+    res.render('index.ejs') 
 }
 
 const renderSignup = (req, res) => {
@@ -18,7 +18,7 @@ const signup = (req, res) => {
     })
 }   
 const renderLogin = (req, res) => {
-    res.render('login.ejs') //when rendering a template no forward slash needed .not redirecting to a url
+    res.render('login.ejs') //when rendering a template no forward slash needed since it is not redirecting to a url
 }
 
 const login = (req, res) => {
@@ -29,7 +29,7 @@ const login = (req, res) => {
         }
     })
     .then(foundusers => {
-        res.redirect(`/users/profile/${foundusers.id}`);//removed /index 
+        res.redirect(`/users/profile/${foundusers.id}`);
     })
 }
 

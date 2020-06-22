@@ -15,11 +15,6 @@ module.exports = (sequelize, DataTypes) => {
     Review.belongsTo(models.category, {foreignKey: 'categoryId'})
     Review.belongsTo(models.ProductType, {foreignKey: 'productTypeId'})
 
-
-
-    // Review.belongsToMany(models.Review, {
-    //  through: 'Review_id',
-   
          };
          return Review;
       
