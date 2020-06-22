@@ -91,6 +91,10 @@ const deleteUser = (req, res) => {
     })
 }
 
+const logOutuser = (req, res) => {
+    res.redirect('/users');
+
+}
 
 module.exports = {
     index,
@@ -100,6 +104,7 @@ module.exports = {
     login,
     renderProfile,
     editProfile,
-    deleteUser
+    deleteUser,
+    logOutuser
 
 }
