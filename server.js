@@ -18,13 +18,26 @@ app.get('/index', (req, res) => {
     res.render('index.ejs') 
 })
 
+app.get('/', (req, res) => {
+    res.render('users/index.ejs')
+  })
+
 //add router object to middleware
 app.use('/users', routes.users);//URL /users needs to go in the user router. 
 //add more routes sheets here
 app.use('/review', routes.review);
 
 
-app.listen(3000, ()=>{
-    console.log("I am listening");
-});
 
+//adding router object to middleware
+app.use('/auth', routes.auth);
+
+
+
+app.listen(process.env.PORT, () => {
+    console.log('I am listening'); //auth refactor
+}
+// app.listen(3000, ()=>{
+//     console.log("I am listening");
+// });
+)
